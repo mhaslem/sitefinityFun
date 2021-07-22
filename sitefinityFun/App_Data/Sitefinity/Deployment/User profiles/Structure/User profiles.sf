@@ -1,0 +1,70 @@
+[
+  {
+    "Id": "903fb48a-8982-4bad-84bb-963db04df05b",
+    "Namespace": "Telerik.Sitefinity.Security.Model",
+    "ClassName": "SitefinityProfile",
+    "Fields": [
+      {
+        "Id": "1df2c24f-4c97-4723-8dd1-10f50c33d4fb",
+        "FieldName": "IsProfilePublic",
+        "ClrType": "System.Boolean",
+        "ColumnName": "is_profile_public",
+        "Presentation": [],
+        "MetaAttributes": [
+          {
+            "Id": "b759a36c-0845-4def-8be2-879ff911f2ad",
+            "Name": "UserFriendlyDataType",
+            "Value": "YesNo"
+          },
+          {
+            "Id": "4aeb13c6-0200-479e-92ef-d384d1347a8b",
+            "Name": "IsCommonProperty",
+            "Value": "true"
+          }
+        ],
+        "DefaultValue": "False",
+        "ApplicationName": "//",
+        "IsDynamic": true
+      },
+      {
+        "Id": "0e22a01c-0b31-431c-b474-2d99d2d1c6e2",
+        "FieldName": "PostsCount",
+        "ClrType": "System.Int32",
+        "ColumnName": "posts_count",
+        "Presentation": [],
+        "MetaAttributes": [
+          {
+            "Id": "e020a664-2edb-4b79-b321-7ae903791b85",
+            "Name": "UserFriendlyDataType",
+            "Value": "Number"
+          },
+          {
+            "Id": "99a4f0e5-cf39-40af-8deb-d23757267d4c",
+            "Name": "IsBuiltIn",
+            "Value": "true"
+          },
+          {
+            "Id": "bfc05b20-d05a-4b9b-a4b3-d2564a1606f2",
+            "Name": "IsCommonProperty",
+            "Value": "true"
+          }
+        ],
+        "DefaultValue": "0",
+        "Hidden": true,
+        "MinValue": "0",
+        "ApplicationName": "//",
+        "IsDynamic": true
+      }
+    ],
+    "ApplicationName": "//",
+    "Presentation": [],
+    "MetaAttributes": [
+      {
+        "Name": "UserFriendlyName",
+        "Value": "Basic profile"
+      }
+    ],
+    "SectionNames": [],
+    "AssemblyName": "Telerik.Sitefinity.Model"
+  }
+]

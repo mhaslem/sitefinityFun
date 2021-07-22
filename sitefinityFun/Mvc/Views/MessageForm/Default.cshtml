@@ -1,0 +1,21 @@
+﻿@model sitefinityFun.Mvc.Models.MessageFormModel
+
+@{
+    if (IsPost)
+    {
+        string test_message = Request.Form["test_message"];
+
+        <text>
+            You entered:
+            <em>@test_message</em>
+
+        </text>
+    }
+}
+
+<h4>Message Form</h4>
+<form method="post">
+    <input type="text" name="test_message" placeholder="Insert Message... " />
+    <input type="submit" value="Let's Do it!" />
+
+</form>

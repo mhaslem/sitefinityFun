@@ -1,0 +1,119 @@
+﻿@model sitefinityFun.Mvc.Models.RegistrationFormModel
+
+@{
+
+    //Validation.RequireField("username", "Username is Required.");
+    //Validation.RequireField("user_password", "Password is Required.");
+    //Validation.RequireField("user_password2", "Password again is Required.");
+    //Validation.RequireField("full_name", "Your full name is Required.");
+    //Validation.RequireField("age", Validator.Integer());
+
+    if (IsPost)
+    {
+        string username = Request.Form["username"];
+        string user_password = Request.Form["user_password"];
+        string user_password2 = Request.Form["user_password2"];
+        string full_name = Request.Form["full_name"];
+        string age = Request.Form["age"];
+
+        <text>
+            Username: @username
+            <br />
+            Password: @user_password
+        </text>
+
+    }
+}
+
+<h2>Register Form</h2>
+@using (Html.BeginForm("Index", "RegistrationForm", FormMethod.Post))
+{
+<div>
+    @Html.LabelFor(m => m.username)
+    @Html.TextBoxFor(m => m.username)
+</div>
+    <div>
+        @Html.LabelFor(m => m.user_password)
+        @Html.TextBoxFor(m => m.user_password)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.user_password2)
+        @Html.TextBoxFor(m => m.user_password2)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.full_name)
+        @Html.TextBoxFor(m => m.full_name)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.age)
+        @Html.TextBoxFor(m => m.age)
+    </div>
+    <div>
+        <input type="submit" value="Register">
+    </div>
+
+
+}
+  
+
+<h2>Register Form NEW:</h2>
+<form method="post">
+    <div>
+        @Html.ValidationMessageFor(m => m.username, "", new { @class = "text-danger" })
+        @Html.LabelFor(m => m.username)
+        @Html.TextBoxFor(m => m.username)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.user_password)
+        @Html.TextBoxFor(m => m.user_password)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.user_password2)
+        @Html.TextBoxFor(m => m.user_password2)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.full_name)
+        @Html.TextBoxFor(m => m.full_name)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.age)
+        @Html.TextBoxFor(m => m.age)
+    </div>
+    <div>
+        <input type="submit" value="Register">
+    </div>
+    <div>
+        <h2>Validation:</h2>
+        @Html.ValidationSummary(false, "", new { @class = "alert-danger" })
+
+    </div>
+</form>
+
+<h2>Register Form OdLD:</h2>
+<form method="post">
+    <label for="username">Username:</label>
+    <br />
+    <input type="text" name="username" value="" />
+    <br />
+
+    <label for="user_password">Password:</label>
+    <br />
+    <input type="password" name="user_password" value="" />
+    <br />
+
+    <label for="user_password2">Password Again:</label>
+    <br />
+    <input type="password" name="user_password2" value="" />
+    <br />
+
+    <label for="full_name">Full Name:</label>
+    <br />
+    <input type="text" name="full_name" value="" />
+    <br />
+
+    <label for="age">Age:</label>
+    <br />
+    <input type="number" name="age" value="20" />
+    <br />
+    <input type="submit" value="Submit" />
+</form>

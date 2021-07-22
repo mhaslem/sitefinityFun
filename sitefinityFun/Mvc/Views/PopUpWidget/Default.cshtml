@@ -1,0 +1,118 @@
+﻿@model sitefinityFun.Mvc.Models.PopUpWidgetModel
+
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@Html.StyleSheet(Url.Content("~/ResourcePackages/Bootstrap4/assets/dist/css/main.min.css"), "head")
+<!---@Html.StyleSheet(Url.Content("~/Mvc/Style/PopUpWidget.css"), "head")-->
+
+<!--
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog popUpWrapper" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Heart of Giving Podcast</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+                @Model.Text
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success" data-dismiss="modal">Close</button>
+                <a role="button" class="btn btn-success" href="https://www.give.org/donor-landing-page/the-heart-of-giving-podcast" target="_blank">Visit Page</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Script(ScriptRef.JQuery, "top")
+
+<script>
+    $(document).ready(function () {
+        $('#myModal').modal('toggle');
+    });
+</script>
+-->
+<style type="text/css">
+    #homepageModal {
+        font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+        display: none;
+        pointer-events: none !important;
+    }
+
+    .modal-content {
+        background-color: #EEEEEE;
+    }
+
+
+
+    .modal-title {
+        color: #08915C;
+    }
+
+    #close-btn {
+        background: #08915C;
+        opacity: 1;
+    }
+
+    .modal-dialog {
+        position: fixed !important;
+        bottom: 0px;
+        left: 0px;
+        margin: 0;
+        z-index: 10040;
+        overflow: auto;
+        overflow-y: auto;
+    }
+</style>
+
+
+<div class="modal fade" id="homepageModal" data-backdrop="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Heart of Giving Podcast</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-btn">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-body">
+                @Model.Text
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Script(ScriptRef.JQuery, "top")
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#homepageModal').modal('show');
+        }, 4000);
+    });
+
+</script>
+
+<script>
+/*
+$(document).ready(function () {
+    setTimeout(function () {
+        $('#homepageModal').show();
+    }, 4000);
+
+    $('#close-btn').click(function () {
+        $('#homepageModal').hide();
+    })
+});
+*/
+</script>
